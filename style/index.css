@@ -1,0 +1,48 @@
+
+
+body{
+    background-color: rgba(2, 6, 66, 0.845);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+}
+
+.main{
+    margin-top: 10vh;
+    border: 1px solid white;
+    width:600px;
+    height:500px; 
+    justify-self: center;
+    border-radius: 10px;
+}
+.main h2{
+    color: white;
+    text-align: center;
+}
+legend{
+    color: rgb(227, 231, 13);
+   
+}
+fieldset{
+    width:90%;
+   margin: 0 auto 0;
+   color: rgb(255, 255, 255);
+   font-size: larger;
+   background-color: rgb(117, 119, 221);
+   border-color: rgb(117, 119, 221);
+}
+select, option{
+    background-color: rgb(24, 2, 35);
+    color:white;
+    border:none;
+    margin-left: 20px;
+}
+#amount{
+    margin-left: 50px;
+}
+
+input[type="number"]{
+    width:60px;
+    height: 20px;
+}
