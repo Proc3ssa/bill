@@ -37,6 +37,8 @@ select, option{
     color:white;
     border:none;
     margin-left: 20px;
+    height:30px;
+    width:90px;
 }
 #amount{
     margin-left: 50px;
