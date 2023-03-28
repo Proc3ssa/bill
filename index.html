@@ -9,14 +9,27 @@
     <title>Water Bill</title>
 
     <script>
+        function notNegative(value){
+
+            if(value <= 0){
+               alert("Value should not 0 or less");
+            }
+
+           
+        }
+
+
         function ajax(){
             alert("button clicked");
         }
         function typed(){
             var table = document.getElementsByTagName("table");
+            var numOfApts = document.getElementById('numOfApts').value;
+
+           
            
 
-            table.th = "faisal";
+           
         }
     </script>
 </head>
@@ -49,7 +62,7 @@
         <input type="number"  name="amount" id="" required><a> /GHc</a><br>
         <br>
         <label for="no-of-apartments">No. of apartments</label>
-        <input type="number" name="numOfAp" id="" required onchange="typed()">
+        <input type="number" name="numOfAp" id="numOfApts" required onchange="typed()">
 
         <article>
             <table border>
@@ -84,7 +97,7 @@
 
         
         </article>
-         <button type="submit">Done</button>
+         <button type="submit" onclick="ajax()">Done</button>
     </fieldset>
 </form>
 
