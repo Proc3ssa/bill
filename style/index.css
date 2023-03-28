@@ -8,17 +8,22 @@ body{
    
 }
 
-.main{
+.main, .results{
     margin-top: 10vh;
     border: 1px solid white;
     width:600px;
-    height:500px; 
+    min-height:520px; 
     justify-self: center;
     border-radius: 10px;
+    padding:5px;
 }
 .main h2{
     color: white;
     text-align: center;
+}
+.results h2{
+    color: white;
+    text-align: center
 }
 legend{
     color: rgb(255, 255, 255);
@@ -32,6 +37,9 @@ fieldset{
    background-color: rgb(117, 119, 221);
    border-color: rgb(117, 119, 221);
 }
+fieldset:hover{
+    background-color: rgb(97, 99, 228);
+}
 select, option{
     background-color: rgb(24, 2, 35);
     color:white;
@@ -44,7 +52,92 @@ select, option{
     margin-left: 50px;
 }
 
-input[type="number"]{
+input[type="number"],input[type="text"]{
     width:60px;
-    height: 20px;
+   
+}
+article{
+ 
+   width:fit-content;
+   margin-left:auto;
+   margin-top: -20px;
+}
+th{
+    color: rgb(205, 255, 4);
+}
+button{
+    color:white;
+    background-color: green;
+    width:90px;
+    height:30px;
+    border: none;
+    border-radius: 5px;
+}
+button:hover{
+    width:93px;
+    box-shadow: 1px 3px 5px black;
+}
+
+.graph{
+    border:1px solid white;
+    width:95%;
+    margin: 10px auto 0;
+    border-radius: 5px;
+    height: 110px;
+    background-color: beige;
+ 
+}
+.res{
+    display:flex;
+    justify-content: space-around;
+}
+.res h4{
+    color:white;
+}
+.res a, a{
+    color:yellow;
+}
+
+.res select{
+    background-color:transparent;
+    color:yellow;
+    border:none;
+    font-weight: bold;
+    height:30px;
+    width:90px;
+}
+
+.results .apartment{
+    border:1px solid white;
+    width:95%;
+    margin: 10px auto 0px;
+    border-radius: 5px;
+    height: 109px;
+    paddin:1px;
+    background-color: beige;
+    
+}
+
+.results p{
+    color:white;
+    text-align: center;
+}
+.apartment h3, h4{
+    margin-top: -3px;
+    margin-left: 2px;
+}
+.data{
+    
+    height: 78px;
+    margin-top: -12px;
+    display: flex;
+    justify-content: space-around;
+
+}
+
+.datas{
+    
+    width:30%;
+    
+    
 }

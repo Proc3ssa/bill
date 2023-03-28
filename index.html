@@ -7,6 +7,18 @@
     <link rel="stylesheet" href="style/index.css">
     <link rel="shortcut icon" href="assets/images/icons/favicon.ico" type="image/x-icon">
     <title>Water Bill</title>
+
+    <script>
+        function ajax(){
+            alert("button clicked");
+        }
+        function typed(){
+            var table = document.getElementsByTagName("table");
+           
+
+            table.th = "faisal";
+        }
+    </script>
 </head>
 <body>
 
@@ -34,11 +46,146 @@
         </select>
 
         <label for="amount" id="amount">Amount </label>
-        <input type="number"  name="amount" id="" required><a> /GHc</a>
+        <input type="number"  name="amount" id="" required><a> /GHc</a><br>
+        <br>
+        <label for="no-of-apartments">No. of apartments</label>
+        <input type="number" name="no-of-apartments" id="" required onchange="typed()">
+
+        <article>
+            <table border>
+                 <tr>
+                    <th>Apartment</th>
+                    <th>No. of tenants</th>
+                </tr>
+<!--
+                <tr>
+                    <td><label for="">aprtment 1</label></td>
+                    <td><input type="number" name="" id="" required></td>
+                </tr>
+
+                <tr>
+                    <td><label for="">aprtment 2</label></td>
+                    <td><input type="number" name="" id="" required></td>
+                </tr>
+
+                <tr>
+                    <td><label for="">aprtment 3</label></td>
+                    <td><input type="number" name="" id="" required></td>
+                </tr>
+
+                <tr>
+                    <td><label for="">aprtment 4</label></td>
+                    <td><input type="number" name="" id="" required></td>
+                </tr> -->
+                   
+                
+            </table>
+            <br>
+
+        
+        </article>
+         <button type="submit" onclick="ajax()">Done</button>
     </fieldset>
 </form>
 
+
+<div class="graph">
+
+</div>
     </div>
+
+    <div class="results">
+        <h2>Results</h2>
+
+        <div class="res">
+            <h4> Month:
+               
+                   <select name="month" id="" required>
+                      
+                        <option value="january" class="0">JANUARY</option>
+                        <option value="february" class="0">FEBRUARY</option>
+                        <option value="march" class="0">MARCH</option>
+                        <option value="april" class="0">APRIL</option>
+                        <option value="may" class="0">MAY</option>
+                        <option value="june" class="0">JUNE</option>
+                        <option value="july" class="0">JULY</option>
+                        <option value="august" class="0">AUGUST</option>
+                        <option value="september" class="0">SEPTEMBER</option>
+                        <option value="october" class="0">OCTOBER</option>
+                        <option value="november" class="0">NOVEMBER</option>
+                        <option value="december" class="0">DECEMBER</option>
+                    </select>
+                </select>
+                Amount:<a style="color:orange;margin:0 10px 0">GHc187</a> Amount Per Person:<a style="color:aqua">GHc13</a>
+            </h4>
+            
+
+           
+        </div>
+
+
+        <div class="apartment">
+            <h3>Apartment 1</h3>
+
+            <div class="data">
+                <div class="datas"><h4 style="text-align: center; color:blue">Number of tenants</h4>
+                <h1 style="color:red; text-align:center;margin-top:-4px">3</h1>
+                </div>
+                <div class="datas">
+                    <h4 style="text-align: center; color:blue">Total amount</h4>
+                <h1 style="color:green; text-align:center;margin-top:-4px">GHc40</h1>
+                </div>
+                <div class="datas" style="background-color:white"></div>
+            </div>
+        </div>
+         <div class="apartment">
+            <h3>Apartment 2</h3>
+
+            <div class="data">
+                <div class="datas"><h4 style="text-align: center; color:blue">Number of tenants</h4>
+                <h1 style="color:red; text-align:center;margin-top:-4px">4</h1>
+                </div>
+                <div class="datas">
+                    <h4 style="text-align: center; color:blue">Total amount</h4>
+                <h1 style="color:green; text-align:center;margin-top:-4px">GHc53</h1>
+                </div>
+                <div class="datas" style="background-color:white"></div>
+            </div>
+        </div>
+         <div class="apartment">
+            <h3>Apartment 3</h3>
+
+            <div class="data">
+                <div class="datas"><h4 style="text-align: center; color:blue">Number of tenants</h4>
+                <h1 style="color:red; text-align:center;margin-top:-4px">0</h1>
+                </div>
+                <div class="datas">
+                    <h4 style="text-align: center; color:blue">Total amount</h4>
+                <h1 style="color:green; text-align:center;margin-top:-4px">GHc0</h1>
+                </div>
+                <div class="datas" style="background-color:white"></div>
+            </div>
+        </div>
+         <div class="apartment">
+            <h3>Apartment 4</h3>
+
+            <div class="data">
+                <div class="datas"><h4 style="text-align: center; color:blue">Number of tenants</h4>
+                <h1 style="color:red; text-align:center;margin-top:-4px">6</h1>
+                </div>
+                <div class="datas">
+                    <h4 style="text-align: center; color:blue">Total amount</h4>
+                <h1 style="color:green; text-align:center;margin-top:-4px">GHc101</h1>
+                </div>
+                <div class="datas" style="background-color:white"></div>
+            </div>
+        </div>
+
+        <p>copyright&copy; processor 2023</p>
+
+    </div>
+
+
     
 </body>
 </html>
