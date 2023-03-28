@@ -24,7 +24,7 @@
 
     <div class="main">
         <h2>WATER BILL</h2>
-<form action="index.php" method="post">
+<form action="engine/index.php" method="post">
     <fieldset>
         <legend>Inputs</legend>
 
@@ -49,7 +49,7 @@
         <input type="number"  name="amount" id="" required><a> /GHc</a><br>
         <br>
         <label for="no-of-apartments">No. of apartments</label>
-        <input type="number" name="no-of-apartments" id="" required onchange="typed()">
+        <input type="number" name="numOfAp" id="" required onchange="typed()">
 
         <article>
             <table border>
@@ -57,26 +57,26 @@
                     <th>Apartment</th>
                     <th>No. of tenants</th>
                 </tr>
-<!--
+
                 <tr>
                     <td><label for="">aprtment 1</label></td>
-                    <td><input type="number" name="" id="" required></td>
+                    <td><input type="number" name="apartment1" id="" required></td>
                 </tr>
 
                 <tr>
                     <td><label for="">aprtment 2</label></td>
-                    <td><input type="number" name="" id="" required></td>
+                    <td><input type="number" name="apartment2" id="" required></td>
                 </tr>
 
                 <tr>
                     <td><label for="">aprtment 3</label></td>
-                    <td><input type="number" name="" id="" required></td>
+                    <td><input type="number" name="apartment3" id="" required></td>
                 </tr>
 
                 <tr>
                     <td><label for="">aprtment 4</label></td>
-                    <td><input type="number" name="" id="" required></td>
-                </tr> -->
+                    <td><input type="number" name="apartment4" id="" required></td>
+                </tr>
                    
                 
             </table>
@@ -84,7 +84,7 @@
 
         
         </article>
-         <button type="submit" onclick="ajax()">Done</button>
+         <button type="submit">Done</button>
     </fieldset>
 </form>
 
@@ -94,7 +94,7 @@
 </div>
     </div>
 
-    <div class="results">
+    <div class="results" style="display: none;">
         <h2>Results</h2>
 
         <div class="res">
