@@ -7,23 +7,37 @@ $month = $_POST['month'];
 $amount = $_POST['amount'];
 (int)$numOfApt = $_POST['numOfAp'];
 $apartment = "apartment";
-$aptId = Date('ymdiss');
+$aptsId = Date('ymdiss');
 
 $insert = 'INSERT into bills values(?,?,?,?)';
 $stmt = $connection -> prepare($insert);
-$stmt -> bind_params("siis", $month, $amount, $numOfApt, $aptsId);
+$stmt -> bind_param("siis", $month, $amount, $numOfApt, $aptsId);
+
 $stmt -> execute();
+
+
+
+var_dump($stmt -> errorno);
 
 for($i = 1; $i <= $numOfApt; $i++){
    
-   $apartment.$i = $_POST[$apartment.$i];
+  $numOfTnts = $_POST[$apartment.$i];
+   $aptname = $apartment.$i;
+   
+   $insert2 = 'INSERT into apts values(?,?,?)';
+   $stmt = $connection -> prepare($insert2);
+   $stmt -> bind_param("ssi", $aptsId, $aptname, $numOfTnts);
+   $stmt -> execute();
+
+   
+
    echo $apartment.$i."<br>";
    
    
 }
 
 echo "
-    Apartments ID: $aptId <br>
+    Apartments ID: $aptsId <br>
     month:$month <br>
     amount:$amount <br>
     number of apartments:$numOfApt
