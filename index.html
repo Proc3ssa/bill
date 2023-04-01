@@ -9,20 +9,22 @@
     <title>Water Bill</title>
 
     <script>
-        function notNegative(value){
-
-            if(value <= 0){
-               alert("Value should not be 0 or negative");
-            }
-
+      
            
-        }
+       
 
 
       
         function typed(){
-            var table = document.getElementsByTagName("table");
-            var numOfApts = document.getElementById('numOfApts').value;
+            var table = document.getElementsById("mytable");
+            var row = table.insertRow();
+            var cell1 = row.insertCell();
+            var cell2 = row.insertCell();
+
+            cell1.innerHTML = "apartment1";
+            cell2.innerHTML = "<input type='number'";
+          
+            }
 
            
            
@@ -31,14 +33,15 @@
            
 
            
-        }
+        
     </script>
 </head>
 <body>
 
     <div class="main">
         <h2>WATER BILL</h2>
-<form action="engine/index.php" method="post">
+<!-- <form action="engine/index.php" method="post"> -->
+    <form>
     <fieldset>
         <legend>Inputs</legend>
 
@@ -66,8 +69,8 @@
         <input type="number" name="numOfAp" id="numOfApts" required onchange="typed()">
 
         <article>
-            <table border>
-                 <tr>
+            <table border id="mytable">
+                 <!-- <tr>
                     <th>Apartment</th>
                     <th>No. of tenants</th>
                 </tr>
@@ -75,9 +78,9 @@
                 <tr>
                     <td><label for="">aprtment 1</label></td>
                     <td><input type="number" name="apartment1" id="" required></td>
-                </tr>
+                </tr> -->
 
-                <tr>
+                <!-- <tr>
                     <td><label for="">aprtment 2</label></td>
                     <td><input type="number" name="apartment2" id="" required></td>
                 </tr>
@@ -91,14 +94,14 @@
                     <td><label for="">aprtment 4</label></td>
                     <td><input type="number" name="apartment4" id="" required></td>
                 </tr>
-                   
+                    -->
                 
             </table>
             <br>
 
         
         </article>
-         <button type="submit" onclick="ajax()">Done</button>
+         <button type="submit" onclick="typed()">Done</button>
     </fieldset>
 </form>
 
