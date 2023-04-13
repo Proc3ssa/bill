@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,121 +10,119 @@
     <title>Water Bill</title>
 
     <script>
-        const input = document.getElementById('input');
-        const table = document.getElementById('myTable');
-  
-        input.addEventListener('input', function() {
-          const row = table.insertRow(-1);
-          const cell1 = row.insertCell(0);
-          const cell2 = row.insertCell(1);
-          cell1.innerHTML = input.value;
-          cell2.innerHTML = new Date().toLocaleString();
+      
+           
+       
+
+
+      
+        function typed(){
+            alert("s");
+            var table = document.getElementsById("mytable");
+            var row = table.insertRow();
+            var cell1 = row.insertCell();
+            var cell2 = row.insertCell();
+
+            cell1.innerHTML = "apartment1";
+            cell2.innerHTML = "<input type='number'";
+            
+          
+            }
+
+           
+           
+
+           
+           
+
+           
         
-        });
     </script>
 </head>
+
 <body>
 
     <div class="main">
         <h2>WATER BILL</h2>
-<!-- <form action="engine/index.php" method="post"> -->
-    <form>
-    <fieldset>
-        <legend>Inputs</legend>
+        <!-- <form action="engine/index.php" method="post"> -->
+        <form>
+            <fieldset>
+                <legend>Inputs</legend>
 
-        <label for="month">Select month</label>
-        <select name="month" id="" required>
-            <option value="" class="0">--select--</option>
-            <option value="january" class="0">january</option>
-            <option value="february" class="0">february</option>
-            <option value="march" class="0">march</option>
-            <option value="april" class="0">april</option>
-            <option value="may" class="0">may</option>
-            <option value="june" class="0">june</option>
-            <option value="july" class="0">july</option>
-            <option value="august" class="0">august</option>
-            <option value="september" class="0">september</option>
-            <option value="october" class="0">october</option>
-            <option value="november" class="0">november</option>
-            <option value="december" class="0">december</option>
-        </select>
+                <label for="month">Select month</label>
+                <select name="month" id="" required>
+                    <option value="" class="0">--select--</option>
+                    <option value="january" class="0">january</option>
+                    <option value="february" class="0">february</option>
+                    <option value="march" class="0">march</option>
+                    <option value="april" class="0">april</option>
+                    <option value="may" class="0">may</option>
+                    <option value="june" class="0">june</option>
+                    <option value="july" class="0">july</option>
+                    <option value="august" class="0">august</option>
+                    <option value="september" class="0">september</option>
+                    <option value="october" class="0">october</option>
+                    <option value="november" class="0">november</option>
+                    <option value="december" class="0">december</option>
+                </select>
 
         <label for="amount" id="amount">Amount </label>
         <input type="number"  name="amount" id="" required><a> /GHc</a><br>
         <br>
         <label for="no-of-apartments">No. of apartments</label>
-        <input type="number" name="numOfAp" id="input" required onchange="typed()">
+        <input type="number" name="numOfAp" id="numOfApts" required onchange="typed()">
 
-        <article>
-            <table border id="mytable">
-                 <tr>
-                    <th>Apartment</th>
-                    <th>No. of tenants</th>
-                </tr>
+                <article>
+                    <table border id="mytable">
+                        <tr>
+                            <th>Apartment</th>
+                            <th>No. of tenants</th>
+                        </tr>
 
-                <tr>
-                    <td><label for="">aprtment 1</label></td>
-                    <td><input type="number" name="apartment1" id="" required></td>
-                </tr>
-
-                <!-- <tr>
-                    <td><label for="">aprtment 2</label></td>
-                    <td><input type="number" name="apartment2" id="" required></td>
-                </tr>
-
-                <tr>
-                    <td><label for="">aprtment 3</label></td>
-                    <td><input type="number" name="apartment3" id="" required></td>
-                </tr>
-
-                <tr>
-                    <td><label for="">aprtment 4</label></td>
-                    <td><input type="number" name="apartment4" id="" required></td>
-                </tr>
-                    -->
-                
-            </table>
-            <br>
-
-        
-        </article>
-         <button type="submit" onclick="typed()">Done</button>
-    </fieldset>
-</form>
+                    </table>
+                    <br>
 
 
-<div class="graph">
+                </article>
+                <button type="submit">Done</button>
+            </fieldset>
+        </form>
 
-</div>
+
+        <div class="graph">
+
+        </div>
     </div>
 
-    <div class="results" style="display:;">
+    <!-- have set display to none; you can change -->
+    <div class="results" style="display:none;">
         <h2>Results</h2>
 
         <div class="res">
             <h4> Month:
-               
-                   <select name="month" id="" required>
-                      
-                        <option value="january" class="0">JANUARY</option>
-                        <option value="february" class="0">FEBRUARY</option>
-                        <option value="march" class="0">MARCH</option>
-                        <option value="april" class="0">APRIL</option>
-                        <option value="may" class="0">MAY</option>
-                        <option value="june" class="0">JUNE</option>
-                        <option value="july" class="0">JULY</option>
-                        <option value="august" class="0">AUGUST</option>
-                        <option value="september" class="0">SEPTEMBER</option>
-                        <option value="october" class="0">OCTOBER</option>
-                        <option value="november" class="0">NOVEMBER</option>
-                        <option value="december" class="0">DECEMBER</option>
-                    </select>
-                </select>
-                Amount:<a style="color:orange;margin:0 10px 0">GHc187</a> Amount Per Person:<a style="color:aqua">GHc13</a>
-            </h4>
-            
 
-           
+                <select name="month" id="" required>
+
+                    <option value="january" class="0">JANUARY</option>
+                    <option value="february" class="0">FEBRUARY</option>
+                    <option value="march" class="0">MARCH</option>
+                    <option value="april" class="0">APRIL</option>
+                    <option value="may" class="0">MAY</option>
+                    <option value="june" class="0">JUNE</option>
+                    <option value="july" class="0">JULY</option>
+                    <option value="august" class="0">AUGUST</option>
+                    <option value="september" class="0">SEPTEMBER</option>
+                    <option value="october" class="0">OCTOBER</option>
+                    <option value="november" class="0">NOVEMBER</option>
+                    <option value="december" class="0">DECEMBER</option>
+                </select>
+                </select>
+                Amount:<a style="color:orange;margin:0 10px 0">GHc187</a> Amount Per Person:<a
+                    style="color:aqua">GHc13</a>
+            </h4>
+
+
+
         </div>
 
 
@@ -131,54 +130,58 @@
             <h3>Apartment 1</h3>
 
             <div class="data">
-                <div class="datas"><h4 style="text-align: center; color:blue">Number of tenants</h4>
-                <h1 style="color:red; text-align:center;margin-top:-4px">3</h1>
+                <div class="datas">
+                    <h4 style="text-align: center; color:blue">Number of tenants</h4>
+                    <h1 style="color:red; text-align:center;margin-top:-4px">3</h1>
                 </div>
                 <div class="datas">
                     <h4 style="text-align: center; color:blue">Total amount</h4>
-                <h1 style="color:green; text-align:center;margin-top:-4px">GHc40</h1>
+                    <h1 style="color:green; text-align:center;margin-top:-4px">GHc40</h1>
                 </div>
                 <div class="datas" style="background-color:white"></div>
             </div>
         </div>
-         <div class="apartment">
+        <div class="apartment">
             <h3>Apartment 2</h3>
 
             <div class="data">
-                <div class="datas"><h4 style="text-align: center; color:blue">Number of tenants</h4>
-                <h1 style="color:red; text-align:center;margin-top:-4px">4</h1>
+                <div class="datas">
+                    <h4 style="text-align: center; color:blue">Number of tenants</h4>
+                    <h1 style="color:red; text-align:center;margin-top:-4px">4</h1>
                 </div>
                 <div class="datas">
                     <h4 style="text-align: center; color:blue">Total amount</h4>
-                <h1 style="color:green; text-align:center;margin-top:-4px">GHc53</h1>
+                    <h1 style="color:green; text-align:center;margin-top:-4px">GHc53</h1>
                 </div>
                 <div class="datas" style="background-color:white"></div>
             </div>
         </div>
-         <div class="apartment">
+        <div class="apartment">
             <h3>Apartment 3</h3>
 
             <div class="data">
-                <div class="datas"><h4 style="text-align: center; color:blue">Number of tenants</h4>
-                <h1 style="color:red; text-align:center;margin-top:-4px">0</h1>
+                <div class="datas">
+                    <h4 style="text-align: center; color:blue">Number of tenants</h4>
+                    <h1 style="color:red; text-align:center;margin-top:-4px">0</h1>
                 </div>
                 <div class="datas">
                     <h4 style="text-align: center; color:blue">Total amount</h4>
-                <h1 style="color:green; text-align:center;margin-top:-4px">GHc0</h1>
+                    <h1 style="color:green; text-align:center;margin-top:-4px">GHc0</h1>
                 </div>
                 <div class="datas" style="background-color:white"></div>
             </div>
         </div>
-         <div class="apartment">
+        <div class="apartment">
             <h3>Apartment 4</h3>
 
             <div class="data">
-                <div class="datas"><h4 style="text-align: center; color:blue">Number of tenants</h4>
-                <h1 style="color:red; text-align:center;margin-top:-4px">6</h1>
+                <div class="datas">
+                    <h4 style="text-align: center; color:blue">Number of tenants</h4>
+                    <h1 style="color:red; text-align:center;margin-top:-4px">6</h1>
                 </div>
                 <div class="datas">
                     <h4 style="text-align: center; color:blue">Total amount</h4>
-                <h1 style="color:green; text-align:center;margin-top:-4px">GHc101</h1>
+                    <h1 style="color:green; text-align:center;margin-top:-4px">GHc101</h1>
                 </div>
                 <div class="datas" style="background-color:white"></div>
             </div>
@@ -187,8 +190,6 @@
         <p>copyright&copy; processor 2023</p>
 
     </div>
-
-
-    
 </body>
+<script src="./main.js"></script>
 </html>
