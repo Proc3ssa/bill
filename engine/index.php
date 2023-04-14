@@ -27,10 +27,7 @@ for($i = 1; $i <= $numOfApt; $i++){
    $insert2 = 'INSERT into apts values(?,?,?)';
    $stmt = $connection -> prepare($insert2);
    $stmt -> bind_param("ssi", $aptsId, $aptname, $numOfTnts);
-
-   if($stmt -> execute()){
-    
-   }
+   $stmt -> execute();
 
    
 
