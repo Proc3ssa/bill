@@ -29,10 +29,7 @@ for($i = 1; $i <= $numOfApt; $i++){
    $stmt -> bind_param("ssi", $aptsId, $aptname, $numOfTnts);
 
    if($stmt -> execute()){
-    echo "new month inerted";
-   }
-   else{
-    echo "unable too insert";
+    
    }
 
    
