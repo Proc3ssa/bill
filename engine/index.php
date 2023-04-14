@@ -29,12 +29,13 @@ for($i = 1; $i <= $numOfApt; $i++){
    $stmt -> bind_param("ssi", $aptsId, $aptname, $numOfTnts);
    $stmt -> execute();
 
-   
-
   //  echo $apartment.$i."<br>";
-   
-   
+  
 }
+
+echo '
+<script>alert("New bill inserted")</script>;
+';
 
 // echo "
 //     Apartments ID: $aptsId <br>
