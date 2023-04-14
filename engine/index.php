@@ -37,6 +37,8 @@ echo '
 <script>alert("New bill inserted")</script>;
 ';
 
+header("Location:../");
+
 // echo "
 //     Apartments ID: $aptsId <br>
 //     month:$month <br>
