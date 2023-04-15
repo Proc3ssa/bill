@@ -5,11 +5,11 @@ const numOfApt = document.getElementById('numOfApts');
 const AptRow = (index) => {
     return `
         <td>
-            <label for="apartment${index}">Apartment ${index}</label>
+            <label for="apartment_${index}">Apartment ${index}</label>
         </td>
         <td>
             <label>
-            <input type="number" name="apartment${index}" id="apartment_${index}" required>
+            <input type="number" name="apartment_${index}" id="apartment_${index}" required>
             </label>
         </td>
     `

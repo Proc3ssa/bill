@@ -21,7 +21,7 @@ $stmt -> execute();
 
 for($i = 1; $i <= $numOfApt; $i++){
    
-  $numOfTnts = $_POST[$apartment.$i];
+  $numOfTnts = $_POST[$apartment."_".$i];
    $aptname = $apartment.$i;
    
    $insert2 = 'INSERT into apts values(?,?,?)';
