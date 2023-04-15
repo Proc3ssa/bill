@@ -32,7 +32,7 @@ for($i = 1; $i <= $numOfApt; $i++){
     echo "new month inerted";
    }
    else{
-    echo ""
+    echo "unable too insert";
    }
 
    
