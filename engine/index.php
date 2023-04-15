@@ -31,6 +31,9 @@ for($i = 1; $i <= $numOfApt; $i++){
    if($stmt -> execute()){
     echo "new month inerted";
    }
+   else{
+    echo ""
+   }
 
    
 
