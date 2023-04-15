@@ -27,19 +27,22 @@ for($i = 1; $i <= $numOfApt; $i++){
    $insert2 = 'INSERT into apts values(?,?,?)';
    $stmt = $connection -> prepare($insert2);
    $stmt -> bind_param("ssi", $aptsId, $aptname, $numOfTnts);
-   $stmt -> execute();
+
+   if($stmt -> execute()){
+    echo "new month inerted";
+   }
 
    
 
-   echo $apartment.$i."<br>";
+  //  echo $apartment.$i."<br>";
    
    
 }
 
-echo "
-    Apartments ID: $aptsId <br>
-    month:$month <br>
-    amount:$amount <br>
-    number of apartments:$numOfApt
-";
+// echo "
+//     Apartments ID: $aptsId <br>
+//     month:$month <br>
+//     amount:$amount <br>
+//     number of apartments:$numOfApt
+// ";
 ?>
