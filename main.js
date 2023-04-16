@@ -9,7 +9,7 @@ const AptRow = (index) => {
         </td>
         <td>
             <label>
-            <input type="number" name="apartment_${index}" id="apartment_${index}" required>
+            <input type="number" name="apartment${index}" id="apartment_${index}" required>
             </label>
         </td>
     `

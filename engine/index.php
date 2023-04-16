@@ -17,7 +17,7 @@ $stmt -> execute();
 
 
 
-var_dump($stmt -> errorno);
+
 
 for($i = 1; $i <= $numOfApt; $i++){
    
