@@ -139,7 +139,7 @@ include 'engine/display.php';
 
             $tntsselect = 'SELECT numOfTents from apts where aptname = "'.$aptsfetch["aptname"].'" and id ="'.$aptsfetch["id"].'"';
 
-            // echo $tntsselect;
+            echo $tntsselect;
 
             $tntsquery = mysqli_query($connection,$tntsselect);
             $tntsresult = mysqli_fetch_assoc($tntsquery);
