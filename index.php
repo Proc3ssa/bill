@@ -1,3 +1,6 @@
+<?php 
+include 'engine/display.php';
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -112,7 +115,7 @@
                     <option value="december" class="0">DECEMBER</option>
                 </select>
                 </select>
-                Amount:<a style="color:orange;margin:0 10px 0">GHc187</a> Amount Per Person:<a
+                Amount:<a style="color:orange;margin:0 10px 0">GHc<?php echo $fetch['amount']?></a> Amount Per Person:<a
                     style="color:aqua">GHc13</a>
             </h4>
 
