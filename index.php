@@ -116,7 +116,7 @@ include 'engine/display.php';
                 </select>
                 </select>
                 Amount:<a style="color:orange;margin:0 10px 0">GHc<?php echo $fetch['amount']?></a> Amount Per Person:<a
-                    style="color:aqua">GHc13</a>
+                    style="color:aqua">GHc<?php echo $perPerson ?></a>
             </h4>
 
 
@@ -125,6 +125,13 @@ include 'engine/display.php';
 
 
         <div class="apartment">
+
+        <?php 
+        $billSelect = "SELECT *FROM bills where mont = 'february'";
+        $billquery = mysqli_query($connection, $billSelect);
+
+        
+        ?>
             <h3>Apartment 1</h3>
 
             <div class="data">
