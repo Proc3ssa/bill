@@ -9,13 +9,21 @@
     <link rel="shortcut icon" href="assets/images/icons/favicon.ico" type="image/x-icon">
     <title>Water Bill</title>
 
-    <script>
-        function results(){
-            var data = document.getElementById('data');
+    <script> var data = document.getElementById('data');
             var input = document.getElementById('input');
+            
+        function results(){
+           
 
             data.style.display = "grid";
             input.style.display = "none";
+
+        }
+
+        function input(){
+          
+            input.style.display = "grid";
+            data.style.display = "none";
 
         }
     </script>
@@ -81,7 +89,7 @@
     <!-- have set display to none; you can change -->
      
     <div class="results" style="display:none;" id="data">
-        <button onclick="results()"> << input</button>
+        <button onclick="input()"> << input</button>
         <h2>Results</h2>
 
         <div class="res">
