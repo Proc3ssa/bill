@@ -1,7 +1,7 @@
 <?php
 include 'connection.php';
 
-$SELECT = "SELECT *FROM bills where mont = 'february'";
+$SELECT = "SELECT *FROM bills where mont = 'may'";
 $Query = mysqli_query($connection, $SELECT);
 $fetch = mysqli_fetch_assoc($Query);
 

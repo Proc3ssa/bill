@@ -124,29 +124,59 @@ include 'engine/display.php';
         </div>
 
 
-        <div class="apartment">
+       
 
         <?php 
-        $billSelect = "SELECT *FROM bills where mont = 'february'";
+        $billSelect = "SELECT *FROM bills where mont = 'may'";
         $billquery = mysqli_query($connection, $billSelect);
 
-        
-        ?>
-            <h3>Apartment 1</h3>
 
-            <div class="data">
+        while($billFetch = mysqli_fetch_assoc($billquery)){
+           $aptsSelect = "SELECT *FROM apts where id = ".$billFetch['aptsId']."";
+           $aptsquery = mysqli_query($connection,$aptsSelect);
+
+           while($aptsfetch = mysqli_fetch_assoc($aptsquery)){
+
+            $tntsselect = 'SELECT numOfTents from apts where aptname = "'.$aptsfetch["aptname"].'" and id ="'.$aptsfetch["id"].'"';
+
+            // echo $tntsselect;
+
+            $tntsquery = mysqli_query($connection,$tntsselect);
+            $tntsresult = mysqli_fetch_assoc($tntsquery);
+
+                echo '<div class="apartment">
+                
+                <h3>'.$aptsfetch["aptname"].'</h3>
+
+                <div class="data">
                 <div class="datas">
                     <h4 style="text-align: center; color:blue">Number of tenants</h4>
-                    <h1 style="color:red; text-align:center;margin-top:-4px">3</h1>
+                    <h1 style="color:red; text-align:center;margin-top:-4px">'.$tntsresult["numOfTents"].'</h1>
                 </div>
                 <div class="datas">
                     <h4 style="text-align: center; color:blue">Total amount</h4>
-                    <h1 style="color:green; text-align:center;margin-top:-4px">GHc40</h1>
+                    <h1 style="color:green; text-align:center;margin-top:-4px">GHc'.$perPerson*$tntsresult["numOfTents"].'</h1>
                 </div>
                 <div class="datas" style="background-color:white"></div>
             </div>
         </div>
-        <div class="apartment">
+                
+                ';
+
+
+
+           }
+
+        }
+
+
+       
+          
+            
+            ?>
+
+           
+        <!-- <div class="apartment">
             <h3>Apartment 2</h3>
 
             <div class="data">
@@ -190,7 +220,7 @@ include 'engine/display.php';
                 </div>
                 <div class="datas" style="background-color:white"></div>
             </div>
-        </div>
+        </div> -->
 
         <p>copyright&copy; processor 2023</p>
 
